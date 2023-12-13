@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@mixin lighten {
+  --color-bg: #fafafa;
+  --color-text: #050100;
+
+  --color-photo-bg: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+  --color-photo-border: #fafafa;
+  --color-photo-shadow: rgba(0, 0, 0, .5);
+
+  --color-accent: #F44336;
+  --color-accent-dark: #C62828;
+}
+
+@mixin darken {
+  --color-bg: #1F201F;
+  --color-text: #FDF5E6;
+
+  --color-photo-bg: linear-gradient(to left, #cb2d3e, #ef473a);
+  --color-photo-border: #9D2933;
+  --color-photo-shadow: rgba(103, 72, 70, 0.5);
+
+  --color-accent: #F40009;
+  --color-accent-dark: #9D2933;
+}
+
+body.dark {
+  @include darken();
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include lighten();
+
+  height: 100%;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+
+.container {
+  max-width: 1100px;
+  min-width: 350px;
+  font-size: 16px;
+
+  margin: 0 auto;
+}

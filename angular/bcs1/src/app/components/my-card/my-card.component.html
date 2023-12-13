@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="bio">
+
+        <h1 class="position">{{ langData?.positionName }}</h1>
+        <div class="name-container">
+          <h2 class="name">{{ langData?.name }}</h2>
+          <p class="status">● {{ langData?.status }}</p>
+        </div>
+        <p class="description">{{ langData?.description }}</p>
+
+      <div class="skills-container">
+
+          <div class="skills">
+            <h4 class="skill-type">SOFT SKILLS</h4>
+            <div class="skills-box soft-skills-box">
+              <div><p *ngFor="let skill of langData?.softSkills?.split(';')">{{ skill }}</p></div>
+            </div>
+          </div>
+
+
+        <div class="skills">
+          <h4 class="skill-type">HARD SKILLS</h4>
+          <div #hardSkillsBox class="skills-box hard-skills-box">&nbsp;</div>
+        </div>
+
+      </div>
+
+
+        <div class="socials">
+          <button (click)="openLink(langData?.github)">GitHub</button>
+          <button #gmailBtn (click)="showGmail(gmailBtn, langData?.gmail)">Gmail</button>
+          <button (click)="openLink(langData?.telegram)">Telegram</button>
+        </div>
+
+    </div>
+    <div class="photo">
+      <img [draggable]="false" src="../assets/images/photo.png" alt="photo">
+    </div>
+  </div>
+</div>

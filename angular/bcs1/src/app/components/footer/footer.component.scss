@@ -1,0 +1,40 @@
+.wrapper {
+  margin-bottom: 20px;
+}
+footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+
+  p {
+    opacity: .5;
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    button {
+      color: var(--color-text);
+      opacity: .5;
+      border: none;
+      background-color: var(--color-bg);
+
+      p {
+        font-weight: 700;
+        padding: 2px 4px;
+        border: 1px solid var(--color-text);
+      }
+
+      &:hover {
+        color: var(--color-accent);
+        cursor: pointer;
+      }
+    }
+  }
+}
